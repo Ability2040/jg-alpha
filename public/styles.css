@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tipografía global */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes bounce-once {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-20px); }
+  60%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce-once {
+  animation: bounce-once 1s ease-out; /* ⏳ solo 1 segundo */
+}
+
+/* Animación bounce-in más elegante */
+@keyframes bounce-in-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-40px);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.05) translateY(10px);
+  }
+  70% {
+    transform: scale(0.95) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Clase personalizada */
+.bounce-in-fade {
+  animation: bounce-in-fade 1.2s ease-out;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
