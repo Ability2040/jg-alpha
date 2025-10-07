@@ -23,47 +23,48 @@
 
 <body class="bg-black text-gray-200 font-[Poppins]">
 
- <!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center bg-black relative">
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center bg-black relative px-4">
 
-  <div class="flex items-center justify-center gap-10">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-10 w-full">
 
     <!-- FOTO ANTES -->
-    <div class="flex flex-col items-center" data-aos="fade-right">
+    <div class="flex flex-col items-center">
       <img src="./images/antes.jpg" 
            alt="Antes"
-           class="rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 w-80 h-96 object-cover">
-      <p class="mt-2 text-gray-300 italic">Antes</p>
+           class="rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 w-64 h-80 md:w-80 md:h-96 object-cover">
+      <p class="mt-2 text-gray-300 italic text-lg md:text-xl">Antes</p>
     </div>
 
-      <!-- TEXTO CENTRAL -->
-  <div class="text-center mx-6" data-aos="zoom-in">
-    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-wider drop-shadow-2xl">
-      JG Alpha
-    </h1>
+    <!-- TEXTO CENTRAL -->
+    <div class="text-center mx-4 order-first md:order-none">
+      <h1 class="text-4xl md:text-7xl font-extrabold text-white tracking-wider drop-shadow-2xl">
+        JG Alpha
+      </h1>
 
-    <p class="mt-4 text-2xl text-gray-200 italic drop-shadow-md">
-      “Sudor hoy, orgullo mañana”
-    </p>
+      <p class="mt-4 text-lg md:text-2xl text-gray-200 italic drop-shadow-md">
+        “Sudor hoy, orgullo mañana”
+      </p>
 
-    <!-- Íconos debajo del texto -->
-    <div class="flex justify-center gap-8 mt-8 text-red-500 text-5xl animate-bounce">
-      <i class="bi bi-heart-pulse-fill"></i>
-      <i class="bi bi-lightning-charge-fill"></i>
+      <!-- Íconos -->
+      <div class="flex justify-center gap-6 mt-6 text-red-500 text-4xl md:text-5xl animate-bounce">
+        <i class="bi bi-heart-pulse-fill"></i>
+        <i class="bi bi-lightning-charge-fill"></i>
+      </div>
     </div>
-  </div>
 
     <!-- FOTO DESPUÉS -->
-    <div class="flex flex-col items-center" data-aos="fade-left">
+    <div class="flex flex-col items-center">
       <img src="./images/despues.jpg" 
            alt="Después"
-           class="rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 w-80 h-96 object-contain bg-black">
-      <p class="mt-2 text-gray-300 italic">Después</p>
+           class="rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 w-64 h-80 md:w-80 md:h-96 object-contain bg-black">
+      <p class="mt-2 text-gray-300 italic text-lg md:text-xl">Después</p>
     </div>
 
   </div>
 
 </section>
+
 
   <!-- SOBRE MÍ -->
   <section class="py-16 px-6 max-w-4xl mx-auto" data-aos="fade-up">
