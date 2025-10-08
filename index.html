@@ -26,38 +26,43 @@
 <!-- HERO -->
 <section class="h-screen flex flex-col justify-center items-center text-center bg-black relative">
 
-  <div class="flex flex-col md:flex-row items-center justify-center gap-10 w-full px-4">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl px-4">
 
     <!-- FOTO ANTES -->
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center order-1 md:order-none">
       <img src="./images/antes.jpg" 
            alt="Antes"
-           class="rounded-lg shadow-lg border-4 border-gray-700 
-                  hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 
-                  w-64 h-80 md:w-80 md:h-96 object-cover">
+           class="hero-img rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 object-cover">
       <p class="mt-2 text-gray-300 italic">Antes</p>
     </div>
 
     <!-- TEXTO CENTRAL -->
-    <div class="text-center mx-6">
-      <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-wider drop-shadow-2xl">
+    <div class="text-center mx-6 order-2">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-wider drop-shadow-2xl">
         JG Alpha
       </h1>
-      <p class="mt-4 text-lg md:text-2xl text-gray-200 italic drop-shadow-md">
+
+      <p class="mt-4 text-2xl text-gray-200 italic drop-shadow-md">
         “Sudor hoy, orgullo mañana”
       </p>
+
       <!-- Íconos debajo del texto -->
-      <div class="flex justify-center gap-8 mt-6 text-red-500 text-4xl md:text-5xl animate-bounce">
+      <div class="flex justify-center gap-8 mt-8 text-red-500 text-5xl animate-bounce">
         <i class="bi bi-heart-pulse-fill"></i>
         <i class="bi bi-lightning-charge-fill"></i>
       </div>
     </div>
 
+    <!-- FOTO DESPUÉS -->
+    <div class="flex flex-col items-center order-3 md:order-none">
+      <img src="./images/despues.jpg" 
+           alt="Después"
+           class="hero-img rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300 object-cover">
+      <p class="mt-2 text-gray-300 italic">Después</p>
+    </div>
 
   </div>
-
 </section>
-
 
   <!-- SOBRE MÍ -->
   <section class="py-16 px-6 max-w-4xl mx-auto" data-aos="fade-up">

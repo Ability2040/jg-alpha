@@ -1094,6 +1094,28 @@ body {
     font-size: 4.5rem;
     line-height: 1;
   }
+  /* Imágenes del hero */
+.hero-img {
+  width: 20rem;      /* ≈320px para escritorio */
+  height: 24rem;     /* ≈380px para escritorio */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero-img {
+    width: 14rem;    /* más pequeño en móvil */
+    height: 18rem;
+  }
+
+  section h1 {
+    font-size: 2.5rem;  /* reduce el tamaño del título */
+  }
+
+  section p {
+    font-size: 1rem;    /* reduce texto para móviles */
+  }
+}
+
 }
 
 
