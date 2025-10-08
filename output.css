@@ -1115,6 +1115,12 @@ body {
     font-size: 1rem;    /* reduce texto para móviles */
   }
 }
+@media (min-width: 1024px) {
+  section .gap-8 {
+    gap: 4rem; /* más separación horizontal en PC */
+  }
+}
+
 
 }
 
