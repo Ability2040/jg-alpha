@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -6,7 +6,8 @@
   <title>JG Alpha</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind compilado -->
   <link href="output.css" rel="stylesheet">
@@ -19,85 +20,108 @@
 
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <style>
+    /* Rebote suave para íconos */
+    @keyframes bounce-soft {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(6px); }
+    }
+    .bounce-soft {
+      animation: bounce-soft 1.2s infinite;
+    }
+
+    /* TÍTULO MEJORADO */
+    .led-title {
+      font-family: 'Orbitron', sans-serif;
+      color: #ffffff; /* Blanco puro */
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow:
+        0 0 6px rgba(255,255,255,0.6),
+        0 0 12px rgba(255,255,255,0.5),
+        0 0 20px rgba(255,255,255,0.4);
+    }
+  </style>
 </head>
 
 <body class="bg-black text-gray-200 font-[Poppins]">
 
 <!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center bg-black relative">
-
-  <div class="flex flex-col md:flex-row items-center justify-center gap-8 w-full px-4">
+<section class="h-screen flex flex-col justify-center items-center bg-black text-center px-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8 w-full max-w-6xl mx-auto">
 
     <!-- FOTO ANTES -->
-    <div class="flex flex-col items-center w-full md:w-1/3 max-w-xs">
+    <div class="flex flex-col items-center">
       <img src="./images/antes.jpg" 
            alt="Antes"
-           class="w-full h-80 object-cover rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300">
+           class="w-64 md:w-80 h-80 object-cover rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300">
       <p class="mt-2 text-gray-300 italic">Antes</p>
     </div>
 
     <!-- TEXTO CENTRAL -->
-    <div class="text-center w-full md:w-1/3 px-4">
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-wider drop-shadow-2xl">
+    <div class="flex flex-col items-center text-center space-y-10">
+      <h1 class="led-title text-5xl md:text-7xl">
         JG Alpha
       </h1>
 
-      <p class="mt-4 text-2xl text-gray-200 italic drop-shadow-md">
+      <p class="text-2xl text-gray-200 italic drop-shadow-md leading-relaxed">
         “Sudor hoy, orgullo mañana”
       </p>
 
-      <div class="flex justify-center gap-6 mt-6 text-red-500 text-4xl animate-bounce">
+      <!-- ÍCONOS -->
+      <div class="flex justify-center gap-6 text-red-500 text-4xl bounce-soft">
         <i class="bi bi-heart-pulse-fill"></i>
         <i class="bi bi-lightning-charge-fill"></i>
       </div>
     </div>
 
-    <!-- FOTO DESPUÉS -->
-    <div class="flex flex-col items-center w-full md:w-1/3 max-w-xs">
+    <!-- FOTO DESPUÉS --> 
+    <div class="flex flex-col items-center">
       <img src="./images/despues.jpg" 
            alt="Después"
-           class="w-full h-80 object-cover rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300">
+           class="w-64 md:w-80 h-80 object-cover rounded-lg shadow-lg border-4 border-gray-700 hover:shadow-red-500/50 hover:scale-105 transition-transform duration-300">
       <p class="mt-2 text-gray-300 italic">Después</p>
     </div>
 
   </div>
-
 </section>
 
+<!-- SOBRE MÍ -->
+<section class="py-16 px-6 max-w-4xl mx-auto" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-white text-center mb-6">Sobre mí</h2>
+  <p class="text-lg text-gray-300 leading-relaxed text-center">
+    Mi nombre es <span class="text-white font-semibold">Joel Gómez</span>, tengo 21 años y llevo 7 años entrenando y perfeccionando mi cuerpo.
+    Pasé de ser un principiante con dudas a llevar mi físico al límite, y ahora quiero inspirarte a que tú también empieces hoy.
+  </p>
+  <p class="text-lg text-gray-300 leading-relaxed text-center mt-4">
+    ¿Estás cansado de decir “mañana empiezo” y nunca hacerlo? ¿De ver cuerpos que admiras deseando ser así?
+    No esperes más: el mejor momento para comenzar fue ayer, el segundo mejor momento es hoy.
+  </p>
+</section>
 
-  <!-- SOBRE MÍ -->
-  <section class="py-16 px-6 max-w-4xl mx-auto" data-aos="fade-up">
-    <h2 class="text-3xl font-bold text-white text-center mb-6">Sobre mí</h2>
-    <p class="text-lg text-gray-300 leading-relaxed text-center">
-      Mi nombre es <span class="text-white font-semibold">Joel Gómez</span>, tengo 21 años y llevo 7 años entrenando y perfeccionando mi cuerpo.
-      Pasé de ser un principiante con dudas a llevar mi físico al límite, y ahora quiero inspirarte a que tú también empieces hoy.
-    </p>
-    <p class="text-lg text-gray-300 leading-relaxed text-center mt-4">
-      ¿Estás cansado de decir “mañana empiezo” y nunca hacerlo? ¿De ver cuerpos que admiras deseando ser así?
-      No esperes más: el mejor momento para comenzar fue ayer, el segundo mejor momento es hoy.
-    </p>
-  </section>
+<!-- POR QUÉ ELEGIRME -->
+<section class="py-16 px-6 bg-gray-900" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-white text-center mb-6">¿Por qué elegirme como tu entrenador?</h2>
+  <p class="text-lg text-gray-300 max-w-3xl mx-auto text-center">
+    Entiendo el proceso desde cero porque yo también estuve ahí.
+    Mis entrenamientos son prácticos, adaptados a cualquier nivel y siempre con disciplina para garantizar resultados reales.
+    Mi compromiso es guiarte y apoyarte en cada paso de tu transformación.
+  </p>
+</section>
 
-  <!-- POR QUÉ ELEGIRME -->
-  <section class="py-16 px-6 bg-gray-900" data-aos="fade-up">
-    <h2 class="text-3xl font-bold text-white text-center mb-6">¿Por qué elegirme como tu entrenador?</h2>
-    <p class="text-lg text-gray-300 max-w-3xl mx-auto text-center">
-      Entiendo el proceso desde cero porque yo también estuve ahí.
-      Mis entrenamientos son prácticos, adaptados a cualquier nivel y siempre con disciplina para garantizar resultados reales.
-      Mi compromiso es guiarte y apoyarte en cada paso de tu transformación.
-    </p>
-  </section>
+<!-- TÉCNICAS -->
+<section class="py-16 px-6" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-white text-center mb-6">Mi enfoque</h2>
+  <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto">
+    Entrenaremos con las técnicas correctas para evitar lesiones y sacar el máximo provecho de cada repetición.
+    Tu salud y progreso son mi prioridad: aprenderás ejecución, postura y constancia.
+  </p>
+</section>
 
-  <!-- TÉCNICAS -->
-  <section class="py-16 px-6" data-aos="fade-up">
-    <h2 class="text-3xl font-bold text-white text-center mb-6">Mi enfoque</h2>
-    <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto">
-      Entrenaremos con las técnicas correctas para evitar lesiones y sacar el máximo provecho de cada repetición.
-      Tu salud y progreso son mi prioridad: aprenderás ejecución, postura y constancia.
-    </p>
-  </section>
-
-  <!-- VIDEOS -->
+<!-- VIDEOS -->
 <section class="py-16 px-6 bg-gray-900">
   <h2 class="text-3xl font-bold text-white text-center mb-10">
     Progreso y Entrenamientos
@@ -105,7 +129,7 @@
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-    <!-- VIDEO 1: ANTES -->
+    <!-- VIDEO 1 -->
     <div data-aos="fade-up" class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-red-500/50 transition-all duration-300 border border-gray-600">
       <video controls class="w-full h-80 object-contain bg-black">
         <source src="./videos/antes.mp4" type="video/mp4">
@@ -116,7 +140,7 @@
       </p>
     </div>
 
-    <!-- VIDEO 2: DESPUÉS -->
+    <!-- VIDEO 2 -->
     <div data-aos="fade-down" class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-red-500/50 transition-all duration-300 border border-gray-600">
       <video controls class="w-full h-80 object-contain bg-black">
         <source src="./videos/despues.mp4" type="video/mp4">
@@ -127,7 +151,7 @@
       </p>
     </div>
 
-    <!-- VIDEO 3: CAMBIO -->
+    <!-- VIDEO 3 -->
     <div data-aos="fade-up" class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-red-500/50 transition-all duration-300 border border-gray-600">
       <video controls class="w-full h-80 object-contain bg-black">
         <source src="./videos/cambio.mp4" type="video/mp4">
@@ -141,7 +165,7 @@
   </div>
 </section>
 
- <!-- SERVICIOS -->
+<!-- SERVICIOS -->
 <section class="py-16 px-6 bg-gradient-to-b from-black via-gray-900 to-black" data-aos="fade-up">
   <h2 class="text-4xl font-extrabold text-center text-white mb-10 drop-shadow-lg">
     🚀 Servicios
@@ -228,19 +252,19 @@
   </div>
 </section>
 
-  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
-    © 2025 JG Alpha – Todos los derechos reservados
-  </footer>
+<footer class="bg-black py-6 text-center text-gray-500 text-sm">
+  © 2025 JG Alpha – Todos los derechos reservados
+</footer>
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,   // velocidad de la animación (ms)
-      once: false,      // ❌ se anima cada vez que aparece en pantalla
-      mirror: true      // ✅ al scrollear hacia arriba también anima
-    });
-  </script>
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true
+  });
+</script>
 
 </body>
 </html>
